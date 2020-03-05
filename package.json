@@ -1,5 +1,5 @@
 {
-  "name": "react-http",
+  "name": "@abitware/react-http",
   "version": "0.0.1",
   "description": "一个基于axios封装http请求库",
   "main": "./build/index.js",
