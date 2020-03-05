@@ -1,4 +1,8 @@
 import Http from "./src" ;
+Http.axios.interceptors.request.use(req=>{
+    console.log(req);
+    return req ;
+});
 var urlPrefix = "http://abit.tpddns.cn:9000/app/mock/44" ;
 var urls = {
     submit:"/api/auth/submit",

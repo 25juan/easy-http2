@@ -117,5 +117,5 @@ function registerApis(prefixURL="",urls = {  },namespace) {
     });
 }
 
-export default { registerApis, data, dataFilter, bool, Apis:win.Apis, _Apis:win._Apis, setMsg, setAxiosConfig } ;
+export default { axios:Axios,registerApis, data, dataFilter, bool, Apis:win.Apis, _Apis:win._Apis, setMsg, setAxiosConfig } ;
 
