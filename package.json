@@ -1,12 +1,13 @@
 {
-  "name": "@abitware/react-http",
-  "version": "0.0.1",
+  "name": "easy-http2",
+  "version": "0.0.3",
   "description": "一个基于axios封装http请求库",
   "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"parcel build -d build ./src/index.js",
-    "dev": "parcel ./index.html"
+    "dev": "parcel ./index.html",
+    "publish": "npm publish --access=public"
   },
   "repository": {
     "type": "git",
