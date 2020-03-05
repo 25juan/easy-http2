@@ -1,17 +1,17 @@
 {
   "name": "easy-http2",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "一个基于axios封装http请求库",
   "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"parcel build -d build ./src/index.js",
+    "build": "parcel build -d build ./src/index.js",
     "dev": "parcel ./index.html",
     "pub": "npm publish --access=public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/25juan/react-http.git"
+    "url": "git+https://github.com/25juan/easy-http2.git"
   },
   "keywords": [
     "react",
@@ -21,11 +21,13 @@
   "author": "sgellar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/25juan/react-http/issues"
+    "url": "https://github.com/25juan/easy-http2/issues"
   },
-  "homepage": "https://github.com/25juan/react-http#readme",
+  "homepage": "https://github.com/25juan/easy-http2#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
     "parcel-bundler": "^1.12.4"
   }
 }
