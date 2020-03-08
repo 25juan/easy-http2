@@ -75,14 +75,14 @@ const ajax = (url,data = {  })=>{
     const config = getAxiosConfig() ;
     return Axios({ method: 'post', url, data,...config }).then(response=>response.data);
 };
-export const dataFilter = function(result){
+const dataFilter = function(result){
     if(result.msg){
         typeof filterMsg == "function" && filterMsg(result.msg,result.state === HttpCode.OK);
     }
     return result ;
 } ;
 
-const setMsg = function (msg) {
+export const setMsg = function (msg) {
     if(typeof msg != "function"){
         throw new Error("setMsg方法只能接受一个函数!");
     }else{
@@ -117,5 +117,5 @@ export function registerApis(prefixURL="", urls = {  }, namespace) {
     });
 }
 
-export default { axios:Axios,registerApis, data, dataFilter, bool, Apis:win.Apis, _Apis:win._Apis, setMsg, setAxiosConfig } ;
+export default { axios:Axios,registerApis, data, bool, Apis:win.Apis, _Apis:win._Apis, setMsg, setAxiosConfig } ;
 
