@@ -1,8 +1,8 @@
 {
   "name": "easy-http2",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "一个基于axios封装http请求库",
-  "main": "./build/index.js",
+  "main": "./src/index.js",
   "module": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
