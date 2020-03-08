@@ -12,7 +12,7 @@ const HttpCode = { OK:"ok", FAil:"fail", };
  * @param result
  * @returns {boolean}
  */
-const bool = function(result){
+export const bool = function(result){
     return result.state == HttpCode.OK ;
 } ;
 /**
@@ -20,7 +20,7 @@ const bool = function(result){
  * @param result
  * @returns {boolean|*}
  */
-const data = function(result){
+export const data = function(result){
     if(result.state == HttpCode.OK){
         return result.data ;
     }
@@ -59,8 +59,8 @@ function generateURL(prefix,urls) {
  * 设置axios的配置
  * @param config
  */
-const setAxiosConfig = function (config) {
-  axiosConfig = config ;
+export const setAxiosConfig = function (config) {
+    axiosConfig = config ;
 };
 /**
  * 获取axios的配置
@@ -75,7 +75,7 @@ const ajax = (url,data = {  })=>{
     const config = getAxiosConfig() ;
     return Axios({ method: 'post', url, data,...config }).then(response=>response.data);
 };
-const dataFilter = function(result){
+export const dataFilter = function(result){
     if(result.msg){
         typeof filterMsg == "function" && filterMsg(result.msg,result.state === HttpCode.OK);
     }
@@ -91,12 +91,12 @@ const setMsg = function (msg) {
 };
 
 const cloneMap = function (source,target) {
-  Object.keys(target).map(key=>{
-      source[key] = target[key] ;
-  }) ;
+    Object.keys(target).map(key=>{
+        source[key] = target[key] ;
+    }) ;
 };
 
-function registerApis(prefixURL="",urls = {  },namespace) {
+export function registerApis(prefixURL="", urls = {  }, namespace) {
     let _Apis = win._Apis ;
     let Apis = win.Apis ;
     const _urls = generateURL(prefixURL,urls);
