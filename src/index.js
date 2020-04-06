@@ -116,6 +116,7 @@ export function registerApis(prefixURL="", urls = {  }, namespace) {
         } ;
     });
 }
-
+export const Apis = win.Apis ;
+export const _Apis = win._Apis ;
 export default { axios:Axios,registerApis, data, bool, Apis:win.Apis, _Apis:win._Apis, setMsg, setAxiosConfig } ;
 
