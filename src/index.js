@@ -115,6 +115,7 @@ export function registerApis(prefixURL="", urls = {  }, namespace) {
             return ajax(value,data).then(dataFilter) ;
         } ;
     });
+    return Apis ;
 }
 export const Apis = win.Apis ;
 export const _Apis = win._Apis ;
